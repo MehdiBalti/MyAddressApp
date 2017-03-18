@@ -1,0 +1,358 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/content_profile"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:ignore="HardcodedText,ContentDescription"
+    >
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardElevation="2dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:orientation="vertical"
+                android:background="#3f51b5"
+                android:weightSum="1"
+                android:scaleType="centerCrop"
+                >
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:gravity="right"
+                    android:layout_height="40dp">
+
+                    <ImageView
+                        android:layout_width="40dp"
+                        android:src="@android:drawable/ic_menu_edit"
+                        android:layout_height="match_parent" />
+                    <ImageView
+                        android:layout_width="40dp"
+                        android:src="@android:drawable/ic_delete"
+                        android:layout_height="match_parent" />
+                    <ImageView
+                        android:layout_width="40dp"
+                        android:src="@drawable/flowbtn"
+                        android:layout_height="match_parent" />
+
+
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:layout_weight="1"
+                    >
+
+                    <ImageView
+                        android:layout_width="115dp"
+                        android:layout_height="115dp"
+                        android:layout_gravity="center_vertical|center_horizontal"
+                        android:scaleType="centerCrop"
+                        android:id="@+id/detailini"
+                        android:src="@drawable/contact" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:text="Mehdi"
+                        android:textStyle="bold"
+                        android:id="@+id/name"
+                        android:layout_marginTop="10dp"
+                        android:textSize="50sp"
+                        android:textColor="#FFFFFF"
+                        android:layout_height="wrap_content" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="5dp"
+                android:background="#cbcbcb" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:weightSum="2"
+                android:layout_height="50dp">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:id="@+id/addTofriend"
+                    android:gravity="center"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:text="Add to friend"
+                    />
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:id="@+id/addTofamily"
+
+                    android:gravity="center"
+
+                    android:text="Add to family"
+                    />
+
+
+            </LinearLayout>
+
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="5dp"
+                android:background="#cbcbcb" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:orientation="horizontal">
+
+                <RelativeLayout
+                    android:layout_width="75dp"
+                    android:layout_height="75dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:background="@android:drawable/ic_menu_call"
+                        android:textSize="12sp"
+                        />
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:id="@+id/layout_info"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:minHeight="75dp"
+                    android:foreground="?android:attr/selectableItemBackground"
+                    android:gravity="left|center_vertical"
+                    android:layout_gravity="center_vertical"
+                    android:orientation="vertical"
+                    android:padding="5dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:text="G MEHDI"
+                            android:visibility="gone"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="?android:attr/textAppearanceMedium"
+                            android:textColor="@color/colorTitle" />
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/numberdd"
+                        android:layout_width="match_parent"
+                        android:text="0347 5245268"
+                        android:textSize="19sp"
+
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/colorDesc" />
+
+                    <TextView
+                        android:id="@+id/id"
+                        android:layout_width="match_parent"
+                        android:visibility="gone"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/colorDesc" />
+
+                </LinearLayout>
+
+
+                <RelativeLayout
+                    android:layout_width="75dp"
+                    android:layout_height="75dp">
+
+                    <TextView
+                        android:id="@+id/status_pending"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:background="@android:drawable/ic_dialog_email"
+                        android:textSize="12sp"
+                        />
+                </RelativeLayout>
+            </LinearLayout>
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#cbcbcb" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <RelativeLayout
+                    android:layout_width="75dp"
+                    android:layout_height="75dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:background="@android:drawable/ic_dialog_email"
+                        android:textSize="12sp"
+                        />
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:minHeight="75dp"
+                    android:foreground="?android:attr/selectableItemBackground"
+                    android:gravity="left|center_vertical"
+                    android:layout_gravity="center_vertical"
+                    android:orientation="vertical"
+                    android:padding="5dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:text="G MEHDI"
+                            android:visibility="gone"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="?android:attr/textAppearanceMedium"
+                            android:textColor="@color/colorTitle" />
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:text="himehdi2012@gmail.com"
+                        android:textSize="19sp"
+                        android:id="@+id/gmaildd"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/colorDesc" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:visibility="gone"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/colorDesc" />
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#cbcbcb" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <RelativeLayout
+                    android:layout_width="75dp"
+                    android:layout_height="75dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:background="@android:drawable/ic_dialog_email"
+                        android:textSize="12sp"
+                        />
+                </RelativeLayout>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#cbcbcb" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:minHeight="75dp"
+                    android:foreground="?android:attr/selectableItemBackground"
+                    android:gravity="left|center_vertical"
+                    android:layout_gravity="center_vertical"
+                    android:orientation="vertical"
+                    android:padding="5dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:text="G MEHDI"
+                            android:visibility="gone"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="?android:attr/textAppearanceMedium"
+                            android:textColor="@color/colorTitle" />
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:text="himehdi2012@gmail.com"
+                        android:textSize="19sp"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/colorDesc" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:visibility="gone"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/colorDesc" />
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+    </android.support.v7.widget.CardView>
+
+
+
+
+
+
+
+</LinearLayout>
+
+
+
