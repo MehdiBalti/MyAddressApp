@@ -20,6 +20,8 @@ import java.util.List;
 import balti.myaddressapp.DetailActivity;
 import balti.myaddressapp.MOdel.Contacts;
 import balti.myaddressapp.R;
+import balti.myaddressapp.ShowFriendDetail;
+import balti.myaddressapp.ShowfamilyDetail;
 
 /**
  * Created by BALTI on 3/10/2017.
@@ -127,14 +129,36 @@ viewHolder.itemView.setOnClickListener(new View.OnClickListener() {
     public void onClick(View view) {
 
 int id=itemList.get(position).getId();
-        Intent i = new Intent(mcontext, DetailActivity.class);
-        i.putExtra("name",itemList.get(position).getName());
-        i.putExtra("number",itemList.get(position).getPhoneNo());
-        i.putExtra("id",id+"");
-        i.putExtra("email",itemList.get(position).getEmail());
+        if (itemList.get(position).getType().equals("0")) {
+            Intent i = new Intent(mcontext, DetailActivity.class);
+            i.putExtra("name", itemList.get(position).getName());
+            i.putExtra("number", itemList.get(position).getPhoneNo());
+            i.putExtra("id", id + "");
+            i.putExtra("email", itemList.get(position).getEmail());
 
 
-        mcontext.startActivity(i);
+            mcontext.startActivity(i);
+        }
+        else if (itemList.get(position).getType().equals("2")){
+            Intent i = new Intent(mcontext, ShowFriendDetail.class);
+            i.putExtra("name", itemList.get(position).getName());
+            i.putExtra("number", itemList.get(position).getPhoneNo());
+            i.putExtra("id", id + "");
+            i.putExtra("email", itemList.get(position).getEmail());
+
+
+            mcontext.startActivity(i);
+        }
+        else if (itemList.get(position).getType().equals("1")){
+            Intent i = new Intent(mcontext, ShowfamilyDetail.class);
+            i.putExtra("name", itemList.get(position).getName());
+            i.putExtra("number", itemList.get(position).getPhoneNo());
+            i.putExtra("id", id + "");
+            i.putExtra("email", itemList.get(position).getEmail());
+
+
+            mcontext.startActivity(i);
+        }
     }
 });
 
