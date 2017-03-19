@@ -57,6 +57,7 @@ public class MainActivity extends AppCompatActivity
             }
         });
 
+
 for (int i =0;i<10;i++) {
 
     Contacts obj = new Contacts();
@@ -121,6 +122,11 @@ for (int i =0;i<10;i++) {
 
 
     }
+
+
+
+
+
 
     @Override
     public void onBackPressed() {
